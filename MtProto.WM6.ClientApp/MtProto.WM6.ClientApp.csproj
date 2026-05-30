@@ -8,6 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>MtProto.WM6.ClientApp</RootNamespace>
     <AssemblyName>MtProto.WM6.ClientApp</AssemblyName>
+    <ApplicationIcon>Resources\appicon.ico</ApplicationIcon>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FormFactorID>{BD0CC567-F6FD-4ca3-99D2-063EFDFC0A39}</FormFactorID>
     <PlatformFamilyName>WindowsCE</PlatformFamilyName>
@@ -49,12 +50,24 @@
     <Compile Include="Password2FAForm.cs" />
     <Compile Include="ChatForm.cs" />
     <Compile Include="SettingsForm.cs" />
+    <Compile Include="SplashForm.cs" />
+    <Compile Include="UiTheme.cs" />
     <Compile Include="Services\AppSettings.cs" />
     <Compile Include="Services\DiagnosticLog.cs" />
     <Compile Include="Services\ResilientMtClient.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Services\SecureNotes.txt" />
+    <Content Include="Resources\appicon.ico" />
+    <Content Include="Resources\appicon.png"><CopyToOutputDirectory>Always</CopyToOutputDirectory></Content>
+    <Content Include="Resources\send.png"><CopyToOutputDirectory>Always</CopyToOutputDirectory></Content>
+    <Content Include="Resources\settings.png"><CopyToOutputDirectory>Always</CopyToOutputDirectory></Content>
+    <Content Include="Resources\chat.png"><CopyToOutputDirectory>Always</CopyToOutputDirectory></Content>
+    <Content Include="Resources\user.png"><CopyToOutputDirectory>Always</CopyToOutputDirectory></Content>
+    <Content Include="Resources\lock.png"><CopyToOutputDirectory>Always</CopyToOutputDirectory></Content>
+    <Content Include="Resources\connect.png"><CopyToOutputDirectory>Always</CopyToOutputDirectory></Content>
+    <Content Include="Resources\key.png"><CopyToOutputDirectory>Always</CopyToOutputDirectory></Content>
+    <Content Include="Resources\splash.png"><CopyToOutputDirectory>Always</CopyToOutputDirectory></Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MtProto.WM6\MtProto.WM6.csproj">

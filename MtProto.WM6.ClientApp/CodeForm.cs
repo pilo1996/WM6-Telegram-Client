@@ -9,12 +9,12 @@ namespace MtProto.WM6.ClientApp
         TextBox code; Label status;
         public CodeForm()
         {
-            Text = "Codice Telegram"; Width = 240; Height = 320;
-            Label l = new Label(); l.Text = "Codice SMS/app"; l.Left = 8; l.Top = 12; l.Width = 220;
-            code = new TextBox(); code.Left = 8; code.Top = 36; code.Width = 220;
-            Button ok = new Button(); ok.Text = "Accedi"; ok.Left = 8; ok.Top = 70; ok.Width = 105; ok.Click += Ok_Click;
-            Button back = new Button(); back.Text = "Indietro"; back.Left = 123; back.Top = 70; back.Width = 105; back.Click += delegate { new LoginForm().Show(); Close(); };
-            status = new Label(); status.Left = 8; status.Top = 110; status.Width = 220; status.Height = 120;
+            UiTheme.Apply(this, "Verifica codice", "key");
+            Label l = UiTheme.Label("Codice SMS/app", 8, 62, 220);
+            code = new TextBox(); code.Left = 8; code.Top = 84; code.Width = 220;
+            Button ok = UiTheme.IconButton("Accedi", "connect", 8, 120, 105); ok.Click += Ok_Click;
+            Button back = UiTheme.IconButton("Indietro", "user", 123, 120, 105); back.Click += delegate { new LoginForm().Show(); Close(); };
+            status = UiTheme.Label("Inserisci il codice ricevuto da Telegram.", 8, 164, 220); status.Height = 80;
             Controls.Add(l); Controls.Add(code); Controls.Add(ok); Controls.Add(back); Controls.Add(status);
         }
         void Ok_Click(object sender, EventArgs e)

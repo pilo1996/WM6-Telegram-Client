@@ -8,7 +8,7 @@ namespace MtProto.WM6.ClientApp
         [MTAThread]
         static void Main()
         {
-            Application.Run(new LoginForm());
+            Application.Run(new SplashForm());
         }
     }
 }

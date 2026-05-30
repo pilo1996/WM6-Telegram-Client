@@ -9,18 +9,18 @@ namespace MtProto.WM6.ClientApp
         TextBox apiId, apiHash, host, port; CheckBox test;
         public SettingsForm()
         {
-            Text = "Settings"; Width = 240; Height = 320;
-            int y = 8;
+            UiTheme.Apply(this, "Settings", "settings");
+            int y = 56;
             apiId = AddText("ApiId", ref y); apiHash = AddText("ApiHash", ref y); host = AddText("Host", ref y); port = AddText("Port", ref y);
-            test = new CheckBox(); test.Text = "Test DC"; test.Left = 8; test.Top = y; test.Width = 220; y += 30; Controls.Add(test);
-            Button save = new Button(); save.Text = "Salva"; save.Left = 8; save.Top = y; save.Width = 105; save.Click += Save_Click;
-            Button log = new Button(); log.Text = "Log"; log.Left = 123; log.Top = y; log.Width = 105; log.Click += Log_Click; Controls.Add(save); Controls.Add(log);
+            test = new CheckBox(); test.Text = "Test DC"; test.Left = 8; test.Top = y; test.Width = 220; test.BackColor = UiTheme.Surface; y += 28; Controls.Add(test);
+            Button save = UiTheme.IconButton("Salva", "key", 8, y, 105); save.Click += Save_Click;
+            Button log = UiTheme.IconButton("Log", "chat", 123, y, 105); log.Click += Log_Click; Controls.Add(save); Controls.Add(log);
             LoadValues();
         }
         TextBox AddText(string label, ref int y)
         {
-            Label l = new Label(); l.Text = label; l.Left = 8; l.Top = y; l.Width = 220; Controls.Add(l); y += 20;
-            TextBox t = new TextBox(); t.Left = 8; t.Top = y; t.Width = 220; Controls.Add(t); y += 30; return t;
+            Label l = UiTheme.Label(label, 8, y, 220); Controls.Add(l); y += 18;
+            TextBox t = new TextBox(); t.Left = 8; t.Top = y; t.Width = 220; Controls.Add(t); y += 28; return t;
         }
         void LoadValues()
         {

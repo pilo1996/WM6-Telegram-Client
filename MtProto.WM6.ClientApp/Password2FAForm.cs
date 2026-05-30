@@ -9,11 +9,11 @@ namespace MtProto.WM6.ClientApp
         TextBox password; Label hint;
         public Password2FAForm()
         {
-            Text = "Password 2FA"; Width = 240; Height = 320;
-            hint = new Label(); hint.Left = 8; hint.Top = 10; hint.Width = 220; hint.Height = 40; hint.Text = "Password cloud Telegram";
-            password = new TextBox(); password.Left = 8; password.Top = 55; password.Width = 220; password.PasswordChar = '*';
-            Button ok = new Button(); ok.Text = "Verifica"; ok.Left = 8; ok.Top = 90; ok.Width = 105; ok.Click += Ok_Click;
-            Button cancel = new Button(); cancel.Text = "Annulla"; cancel.Left = 123; cancel.Top = 90; cancel.Width = 105; cancel.Click += delegate { new LoginForm().Show(); Close(); };
+            UiTheme.Apply(this, "Password 2FA", "lock");
+            hint = UiTheme.Label("Password cloud Telegram", 8, 62, 220); hint.Height = 36;
+            password = new TextBox(); password.Left = 8; password.Top = 102; password.Width = 220; password.PasswordChar = '*';
+            Button ok = UiTheme.IconButton("Verifica", "key", 8, 138, 105); ok.Click += Ok_Click;
+            Button cancel = UiTheme.IconButton("Annulla", "user", 123, 138, 105); cancel.Click += delegate { new LoginForm().Show(); Close(); };
             Controls.Add(hint); Controls.Add(password); Controls.Add(ok); Controls.Add(cancel);
         }
         void Ok_Click(object sender, EventArgs e)
