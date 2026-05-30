@@ -172,3 +172,27 @@ See `MtProto.WM6/LICENSE.txt`.
 ## Disclaimer
 
 This project is an experimental Windows Mobile 6 MTProto client scaffold. It is not affiliated with Telegram. Use Telegram APIs according to Telegram's terms and validate everything against test DC before touching production accounts.
+
+## UI assets and visual shell
+
+This version includes a lightweight Windows Mobile 6 UI skin with original, project-owned assets:
+
+- `Resources/appicon.ico` application icon
+- `Resources/appicon.png` header icon
+- `Resources/splash.png` splash screen
+- `Resources/send.png`, `settings.png`, `chat.png`, `user.png`, `lock.png`, `connect.png`, `key.png`
+- `UiTheme.cs` centralized colors, header drawing and icon-button helper
+- `SplashForm.cs` startup screen before login
+
+No official Telegram logo, trademarked artwork, or branded assets are bundled. The visual language is Telegram-inspired only in the broad “blue messenger” sense, because legal ambiguity is a terrible dependency manager.
+
+### Windows Mobile graphics notes
+
+The images are small PNG files copied to the output folder as content. This avoids `.resx` friction on Visual Studio 2008 / .NET Compact Framework projects and keeps deployment simple:
+
+```text
+MtProto.WM6.ClientApp/Resources/*.png
+MtProto.WM6.ClientApp/Resources/appicon.ico
+```
+
+If a target device has trouble loading PNGs through `System.Drawing.Bitmap`, replace the PNGs with BMP files and adjust `UiTheme.LoadBitmap` accordingly.
