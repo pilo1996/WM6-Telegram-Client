@@ -1,0 +1,43 @@
+<Project ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7EDE37C5-0A59-47D5-BF49-5F1DA6A94901}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MtProto.WM6</RootNamespace>
+    <AssemblyName>MtProto.WM6</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Crypto\AesIge.cs" />
+    <Compile Include="Crypto\BigInteger.cs" />
+    <Compile Include="Crypto\HashHelper.cs" />
+    <Compile Include="Crypto\RandomHelper.cs" />
+    <Compile Include="Crypto\RsaKey.cs" />
+    <Compile Include="TL\TLBinaryReader.cs" />
+    <Compile Include="TL\TLBinaryWriter.cs" />
+    <Compile Include="TL\TLObject.cs" />
+    <Compile Include="TL\TLTypes.cs" />
+    <Compile Include="TL\TLRegistry.cs" />
+    <Compile Include="Runtime\Rpc.cs" />
+    <Compile Include="Runtime\MessageContainer.cs" />
+    <Compile Include="Runtime\DcOptions.cs" />
+    <Compile Include="Runtime\PasswordSrp.cs" />
+    <Compile Include="Runtime\ServiceMessages.cs" />
+    <Compile Include="Generated\TLBootstrap.cs" />
+    <Compile Include="Tests\TestDcSmoke.cs" />
+    <Compile Include="Tests\CryptoSelfTest.cs" />
+    <Compile Include="Transport\IMtProtoTransport.cs" />
+    <Compile Include="Transport\TcpAbridgedTransport.cs" />
+    <Compile Include="Session\AuthKey.cs" />
+    <Compile Include="Session\MtMessage.cs" />
+    <Compile Include="Session\MtSession.cs" />
+    <Compile Include="Session\MessagePacker.cs" />
+    <Compile Include="Session\SessionStore.cs" />
+    <Compile Include="Client\Authenticator.cs" />
+    <Compile Include="Client\MtProtoClient.cs" />
+    <Compile Include="Generated\CoreMethods.cs" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,2 @@
+Session storage note:
+Windows Mobile 6/.NET Compact Framework has limited platform crypto APIs. This sample writes the MTProto session using MtProto.WM6.Session.SessionStore. For production, replace it with a device-bound encrypted store backed by the OEM certificate store, SQL CE encrypted database, or a native CryptoAPI wrapper. Do not ship auth_key as plaintext.

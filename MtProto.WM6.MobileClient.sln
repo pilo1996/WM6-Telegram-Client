@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MtProto.WM6", "MtProto.WM6\MtProto.WM6.csproj", "{7EDE37C5-0A59-47D5-BF49-5F1DA6A94901}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MtProto.WM6.ClientApp", "MtProto.WM6.ClientApp\MtProto.WM6.ClientApp.csproj", "{2D6E4D72-4D24-4E50-AFAF-3266E2664D82}"
+EndProject
+Global
+    GlobalSection(SolutionConfigurationPlatforms) = preSolution
+        Debug|Any CPU = Debug|Any CPU
+        Release|Any CPU = Release|Any CPU
+    EndGlobalSection
+    GlobalSection(ProjectConfigurationPlatforms) = postSolution
+        {7EDE37C5-0A59-47D5-BF49-5F1DA6A94901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {7EDE37C5-0A59-47D5-BF49-5F1DA6A94901}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {7EDE37C5-0A59-47D5-BF49-5F1DA6A94901}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {7EDE37C5-0A59-47D5-BF49-5F1DA6A94901}.Release|Any CPU.Build.0 = Release|Any CPU
+        {2D6E4D72-4D24-4E50-AFAF-3266E2664D82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {2D6E4D72-4D24-4E50-AFAF-3266E2664D82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {2D6E4D72-4D24-4E50-AFAF-3266E2664D82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {2D6E4D72-4D24-4E50-AFAF-3266E2664D82}.Release|Any CPU.Build.0 = Release|Any CPU
+    EndGlobalSection
+    GlobalSection(SolutionProperties) = preSolution
+        HideSolutionNode = FALSE
+    EndGlobalSection
+EndGlobal
